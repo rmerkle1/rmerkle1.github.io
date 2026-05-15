@@ -1,0 +1,175 @@
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #eef1f5;
+  color: #1a202c;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+
+header {
+  background: #fff;
+  border-bottom: 1px solid #d1d9e0;
+  padding: 24px 32px;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #1a202c;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #718096;
+}
+
+/* ── Main grid ── */
+
+main {
+  flex: 1;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 32px 24px 48px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* ── Card ── */
+
+.card {
+  background: #fff;
+  border: 1px solid #d1d9e0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.18s, transform 0.18s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ── Image area ── */
+
+.card-image {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #f4f6f8;
+  border-bottom: 1px dashed #d1d9e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Chapter badge ── */
+
+.chapter-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e2e8f0;
+  color: #4a5568;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.badge-semester {
+  background: #e0f4ff;
+  color: #0077a8;
+}
+
+/* ── Card body ── */
+
+.card-body {
+  padding: 16px 18px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1a202c;
+  letter-spacing: -0.01em;
+}
+
+.card-desc {
+  font-size: 0.85rem;
+  color: #718096;
+  line-height: 1.5;
+}
+
+/* ── Card footer ── */
+
+.card-footer {
+  padding: 12px 18px 16px;
+}
+
+.launch-btn {
+  display: inline-block;
+  padding: 8px 22px;
+  background: #00addb;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  letter-spacing: 0.02em;
+  transition: background 0.15s, transform 0.1s;
+}
+
+.launch-btn:hover {
+  background: #009ac5;
+  transform: translateY(-1px);
+}
+
+.launch-btn:active {
+  transform: translateY(0);
+}
+
+/* ── Footer ── */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.8rem;
+  color: #a0aec0;
+  border-top: 1px solid #d1d9e0;
+  background: #fff;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 600px) {
+  header { padding: 18px 20px; }
+  header h1 { font-size: 1.6rem; }
+  main { padding: 20px 16px 40px; }
+  .grid { grid-template-columns: 1fr; }
+}
